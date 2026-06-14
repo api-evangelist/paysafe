@@ -1,0 +1,129 @@
+{
+  "meta": {
+    "source": "https://developer.paysafe.com/en/support/reference-information/documentation-changelog/",
+    "fetched": "2026-06-13",
+    "provider": "paysafe"
+  },
+  "entries": [
+    {
+      "title": "Cardinal SDK breaking change and form field styling for Android SDK",
+      "date": "2026-06",
+      "type": "UPDATED",
+      "url": "https://developer.paysafe.com/en/api-docs/mobile-sdks-payments-api/paysafe-android-sdk/"
+    },
+    {
+      "title": "BLIK via Skrill Quick Checkout payment method",
+      "date": "2026-05",
+      "type": "NEW",
+      "url": "https://developer.paysafe.com/en/api-docs/payments-api/add-payment-methods/"
+    },
+    {
+      "title": "ePay via Skrill Quick Checkout payment method",
+      "date": "2026-05",
+      "type": "NEW",
+      "url": "https://developer.paysafe.com/en/api-docs/payments-api/add-payment-methods/"
+    },
+    {
+      "title": "Pay with Crypto payment solution",
+      "date": "2026-05",
+      "type": "NEW",
+      "url": "https://developer.paysafe.com/en/api-docs/payments-api/add-payment-methods/"
+    },
+    {
+      "title": "Partial Authorization Service (PAS) Paysafe Checkout integration",
+      "date": "2026-05",
+      "type": "NEW",
+      "url": "https://developer.paysafe.com/en/api-docs/payments-api/add-payment-methods/"
+    },
+    {
+      "title": "Google Pay Payouts feature",
+      "date": "2026-04",
+      "type": "NEW",
+      "url": "https://developer.paysafe.com/en/api-docs/payments-api/"
+    },
+    {
+      "title": "Merchant Termination Inquiry API Reference",
+      "date": "2026-04",
+      "type": "NEW",
+      "url": "https://developer.paysafe.com/en/paysafe-vendor-search-api/"
+    },
+    {
+      "title": "Apple Pay Recurring Payments",
+      "date": "2026-04",
+      "type": "NEW",
+      "url": "https://developer.paysafe.com/en/api-docs/payments-api/"
+    },
+    {
+      "title": "Shopping Carts documentation for multiple platforms",
+      "date": "2026-04",
+      "type": "UPDATED",
+      "url": "https://developer.paysafe.com/en/api-docs/payments-api/"
+    },
+    {
+      "title": "Credentials-on-File documentation for Payments and Cards APIs",
+      "date": "2026-03",
+      "type": "UPDATED",
+      "url": "https://developer.paysafe.com/en/api-docs/payments-api/get-started/credentials-on-file-payments-api/"
+    },
+    {
+      "title": "Payfac Sub-merchant API labeling corrections",
+      "date": "2026-03",
+      "type": "FIXED",
+      "url": "https://developer.paysafe.com/en/api-docs/"
+    },
+    {
+      "title": "Apple Pay Recurring Transactions support",
+      "date": "2026-03",
+      "type": "NEW",
+      "url": "https://developer.paysafe.com/en/api-docs/payments-api/get-started/credentials-on-file-payments-api/"
+    },
+    {
+      "title": "Openbucks gift card payment solution",
+      "date": "2026-02",
+      "type": "NEW",
+      "url": "https://developer.paysafe.com/en/api-docs/payments-api/"
+    },
+    {
+      "title": "Paysafe React Native SDK documentation",
+      "date": "2026-02",
+      "type": "NEW",
+      "url": "https://developer.paysafe.com/en/api-docs/"
+    },
+    {
+      "title": "Google Pay integrations (Paysafe JS and Checkout)",
+      "date": "2026-02",
+      "type": "NEW",
+      "url": "https://developer.paysafe.com/en/api-docs/payments-api/"
+    },
+    {
+      "title": "Apple Pay button sizing options",
+      "date": "2026-02",
+      "type": "UPDATED",
+      "url": "https://developer.paysafe.com/en/api-docs/payments-api/"
+    },
+    {
+      "title": "badBin event renamed to binNotification",
+      "date": "2026-02",
+      "type": "UPDATED",
+      "url": "https://developer.paysafe.com/en/api-docs/payments-api/"
+    },
+    {
+      "title": "Apple Pay REST API integration page",
+      "date": "2026-01",
+      "type": "UPDATED",
+      "url": "https://developer.paysafe.com/en/api-docs/apple-pay-cards-api/"
+    },
+    {
+      "title": "Encrypted Payload documentation",
+      "date": "2026-01",
+      "type": "NEW",
+      "url": "https://developer.paysafe.com/en/api-docs/apple-pay-cards-api/"
+    },
+    {
+      "title": "Decrypted Payload documentation",
+      "date": "2026-01",
+      "type": "NEW",
+      "url": "https://developer.paysafe.com/en/api-docs/apple-pay-cards-api/"
+    }
+  ]
+}

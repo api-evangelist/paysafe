@@ -1,0 +1,80 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Paysafe",
+  "url": "https://www.paysafe.com",
+  "description": "Paysafe is an integrated payment platform providing businesses with REST APIs for online payments, digital wallets, prepaid cards, pay-by-cash processing, and merchant account management.",
+  "sameAs": [
+    "https://github.com/paysafegroup",
+    "https://github.com/paysafecard"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "url": "https://www.paysafe.com/en/information/contact/",
+    "contactType": "customer support"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Paysafe API Products",
+    "itemListElement": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "Paysafe Payments API",
+        "applicationCategory": "Payment Processing",
+        "url": "https://developer.paysafe.com/en/api-docs/payments-api/overview/",
+        "description": "Core REST API to process payments across 100+ methods including cards, bank transfers, cash vouchers, digital wallets, and crypto.",
+        "offers": {
+          "@type": "Offer",
+          "url": "https://developer.paysafe.com/en/api-docs/payments-api/overview/"
+        }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "Paysafe 3D Secure API",
+        "applicationCategory": "Authentication",
+        "url": "https://developer.paysafe.com/en/api-docs/3ds/using-the-api/api-endpoints/",
+        "description": "3D Secure v2 API providing PSD2-compliant strong customer authentication (SCA) for card transactions."
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "Paysafe Payment Scheduler API",
+        "applicationCategory": "Subscription Management",
+        "url": "https://developer.paysafe.com/en/api-docs/payment-scheduler/overview/",
+        "description": "REST API for creating and managing recurring payment plans and customer subscriptions."
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "Paysafe Applications API",
+        "applicationCategory": "Merchant Onboarding",
+        "url": "https://developer.paysafe.com/en/api-docs/applications-api/overview/",
+        "description": "REST API for platforms and payment facilitators to create white-labelled merchant onboarding experiences."
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "Paysafe Embedded Wallets API",
+        "applicationCategory": "Digital Wallets",
+        "url": "https://docs.paysafe.com/docs/embedded-wallets",
+        "description": "REST API enabling platforms to embed digital wallet functionality with prepaid cards and crypto on-ramp."
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "PaysafeCard REST API",
+        "applicationCategory": "Prepaid Payments",
+        "url": "https://www.paysafecard.com/fileadmin/api/",
+        "description": "API enabling merchants to accept PaysafeCard prepaid voucher payments, payouts, and refunds."
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "Paysafe FX Rates API",
+        "applicationCategory": "Currency Exchange",
+        "url": "https://developer.paysafe.com/en/fx-rates-api/",
+        "description": "REST API providing foreign exchange rate data for multi-currency payment processing and dynamic currency conversion."
+      }
+    ]
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "url": "https://developer.paysafe.com/en/",
+    "name": "Paysafe Developer Portal"
+  }
+}
