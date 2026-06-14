@@ -1,0 +1,304 @@
+aid: paysafe
+url: https://raw.githubusercontent.com/api-evangelist/paysafe/refs/heads/main/apis.yml
+name: Paysafe
+tags:
+  - Payments
+  - Digital Wallets
+  - Prepaid Cards
+  - Financial Services
+  - Fintech
+  - High-Risk Payments
+image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+created: '2026-06-13'
+modified: '2026-06-13'
+description: >-
+  Paysafe is an integrated payment platform providing businesses with REST APIs for online payments,
+  digital wallets, prepaid cards, pay-by-cash processing, and merchant account management. The platform
+  supports a broad range of payment methods including credit and debit cards, ACH/SEPA direct debit,
+  alternative payment methods, PaysafeCash, PaysafeCard vouchers, and embedded digital wallet solutions.
+  Paysafe specializes in high-risk and regulated industries and offers white-label merchant onboarding,
+  3D Secure authentication, recurring payment scheduling, and FX rates for global commerce.
+specificationVersion: '0.19'
+maintainers:
+  - FN: API Evangelist
+    url: http://apievangelist.com
+    email: info@apievangelist.com
+apis:
+  - aid: paysafe:paysafe-payments-api
+    name: Paysafe Payments API
+    tags:
+      - Payments
+      - Cards
+      - ACH
+      - Direct Debit
+      - Wallets
+      - Alternative Payments
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    baseURL: https://api.paysafe.com
+    humanURL: https://developer.paysafe.com/en/api-docs/payments-api/overview/
+    description: >-
+      The core REST API to process payments from customers across multiple payment methods including
+      credit and debit cards, bank transfers (BLIK, EPS, iDEAL, Interac e-Transfer, ACH, SEPA), cash
+      vouchers (PaysafeCash, PaysafeCard, Openbucks), digital wallets (Apple Pay, Google Pay, PayPal,
+      Skrill, Neteller, Venmo), and crypto. A single integration provides access to all supported methods
+      with resource-oriented URLs, JSON-encoded responses, and standard HTTP status codes.
+    properties:
+      - url: https://developer.paysafe.com/en/api-docs/payments-api/overview/
+        type: Documentation
+      - url: https://developer.paysafe.com/en/api-docs/payments-api/api-reference/
+        type: APIReference
+      - url: https://developer.paysafe.com/en/payments-api/
+        type: GettingStarted
+
+  - aid: paysafe:paysafe-3ds-api
+    name: Paysafe 3D Secure API
+    tags:
+      - 3D Secure
+      - Authentication
+      - Fraud Prevention
+      - Cards
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    baseURL: https://api.paysafe.com
+    humanURL: https://developer.paysafe.com/en/api-docs/3ds/using-the-api/api-endpoints/
+    description: >-
+      The 3D Secure v2 API provides strong customer authentication (SCA) for card transactions in line
+      with PSD2 mandates. Merchants can initiate device fingerprinting and authentication flows, look up
+      authentication status by ID, and receive authentication results to include in downstream payment
+      requests. Base path: /threedsecure/v2/accounts/{account_id}.
+    properties:
+      - url: https://developer.paysafe.com/en/api-docs/3ds/using-the-api/api-endpoints/
+        type: Documentation
+      - url: https://developer.paysafe.com/en/api-docs/3ds/
+        type: APIReference
+
+  - aid: paysafe:paysafe-payment-scheduler-api
+    name: Paysafe Payment Scheduler API
+    tags:
+      - Subscriptions
+      - Recurring Payments
+      - Plans
+      - Billing
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    baseURL: https://api.paysafe.com
+    humanURL: https://developer.paysafe.com/en/api-docs/payment-scheduler/overview/
+    description: >-
+      A REST API for creating and managing recurring payment plans and customer subscriptions. Merchants
+      define billing plans (interval, amount, currency) and subscribe customers to them. Supports full
+      CRUD for plans and subscriptions with JSON request/response format. Base path:
+      /subscriptionsplans/v1/.
+    properties:
+      - url: https://developer.paysafe.com/en/api-docs/payment-scheduler/overview/
+        type: Documentation
+      - url: https://developer.paysafe.com/en/api-docs/payment-scheduler/using-the-api/api-endpoints/
+        type: APIReference
+
+  - aid: paysafe:paysafe-applications-api
+    name: Paysafe Applications API
+    tags:
+      - Merchant Onboarding
+      - Applications
+      - Platforms
+      - PayFac
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    baseURL: https://api.paysafe.com
+    humanURL: https://developer.paysafe.com/en/api-docs/applications-api/overview/
+    description: >-
+      A REST API that allows platforms and payment facilitators to create white-labelled merchant onboarding
+      experiences. Supports creating, updating, and submitting merchant applications, uploading supporting
+      documents, retrieving terms and conditions, and receiving webhook notifications on status changes.
+      Base path: /merchant/v1/applications. Supports batch onboarding for multiple merchants.
+    properties:
+      - url: https://developer.paysafe.com/en/api-docs/applications-api/overview/
+        type: Documentation
+      - url: https://developer.paysafe.com/en/applications-api/
+        type: APIReference
+
+  - aid: paysafe:paysafe-embedded-wallets-api
+    name: Paysafe Embedded Wallets API
+    tags:
+      - Digital Wallets
+      - Embedded Finance
+      - Prepaid
+      - Crypto
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    baseURL: https://api.paysafe.com
+    humanURL: https://docs.paysafe.com/docs/embedded-wallets
+    description: >-
+      A REST API enabling platforms to embed digital wallet functionality directly into their products.
+      Customers can add funds, spend, withdraw, and manage virtual and physical prepaid cards. Supports
+      card creation and management, card tokenization for Google Pay, Apple Pay, and Samsung Pay, and
+      crypto on-ramp for purchasing cryptocurrencies with fiat via Skrill. Bearer JWT authentication
+      required. Base path: /digitalwallets/v1/profile.
+    properties:
+      - url: https://docs.paysafe.com/docs/embedded-wallets
+        type: Documentation
+      - url: https://docs.paysafe.com/docs/embedded-wallets/prepaid-cards/overview
+        type: APIReference
+
+  - aid: paysafe:paysafe-paysafecard-api
+    name: PaysafeCard REST API
+    tags:
+      - Prepaid
+      - Vouchers
+      - Pay-by-Cash
+      - PaysafeCard
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    baseURL: https://api.paysafecard.com
+    humanURL: https://www.paysafecard.com/fileadmin/api/
+    description: >-
+      The PaysafeCard REST API enables online merchants to accept PaysafeCard prepaid voucher payments,
+      payouts, and refunds. PaysafeCard is a global prepaid payment method available in 43+ countries,
+      using a 16-digit PIN system. The API also provides settlement report data for financial reconciliation.
+      Documented in API Blueprint format with English and German specifications.
+    properties:
+      - url: https://www.paysafecard.com/fileadmin/api/
+        type: Documentation
+      - url: https://github.com/paysafecard/api-documentation
+        type: GitHubRepository
+
+  - aid: paysafe:paysafe-payfac-submerchant-api
+    name: Paysafe PayFac Sub-merchant API
+    tags:
+      - PayFac
+      - Sub-merchants
+      - Onboarding
+      - Platforms
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    baseURL: https://api.paysafe.com
+    humanURL: https://developer.paysafe.com/en/api-docs/
+    description: >-
+      A REST API for payment facilitators to onboard sub-merchants for payment processing capabilities.
+      Enables platforms acting as PayFacs to manage sub-merchant accounts under their master merchant
+      account, controlling payment processing features and limits for each sub-merchant.
+    properties:
+      - url: https://developer.paysafe.com/en/api-docs/
+        type: Documentation
+
+  - aid: paysafe:paysafe-merchant-termination-inquiry-api
+    name: Paysafe Merchant Termination Inquiry API
+    tags:
+      - Risk
+      - Compliance
+      - Sub-merchants
+      - MATCH
+      - Visa
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    baseURL: https://api.paysafe.com
+    humanURL: https://developer.paysafe.com/en/api-docs/
+    description: >-
+      A compliance API that screens prospective sub-merchants against the Mastercard MATCH Pro and Visa
+      terminated merchant databases before onboarding. Helps payment facilitators identify high-risk
+      merchants and comply with card network requirements for sub-merchant due diligence.
+    properties:
+      - url: https://developer.paysafe.com/en/api-docs/
+        type: Documentation
+
+  - aid: paysafe:paysafe-fx-rates-api
+    name: Paysafe FX Rates API
+    tags:
+      - FX
+      - Currency
+      - Exchange Rates
+      - International
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    baseURL: https://api.paysafe.com
+    humanURL: https://developer.paysafe.com/en/fx-rates-api/
+    description: >-
+      A value-added REST API providing foreign exchange rate data to support multi-currency payment
+      processing and dynamic currency conversion. Used in conjunction with the Payments API to present
+      pricing to customers in their local currency.
+    properties:
+      - url: https://developer.paysafe.com/en/fx-rates-api/
+        type: Documentation
+
+common:
+  - url: https://www.paysafe.com
+    type: Website
+  - url: https://developer.paysafe.com/en/
+    type: Portal
+  - url: https://developer.paysafe.com/en/api-docs/
+    type: Documentation
+  - url: https://docs.paysafe.com/
+    type: Documentation
+  - url: https://developer.paysafe.com/en/support/reference-information/documentation-changelog/
+    type: ChangeLog
+  - url: https://developer.paysafe.com/en/support/reference-information/rest-api-architecture/
+    type: Authentication
+  - url: https://merchant.paysafe.com/portal
+    type: Dashboard
+  - url: https://merchant.test.paysafe.com/portal/login
+    type: Sandbox
+  - url: https://www.paysafe.com/en/paysafegroup/comprehensive-privacy-policy/
+    type: PrivacyPolicy
+  - url: https://www.paysafe.com/en/information/contact/
+    type: Contact
+  - url: https://github.com/paysafegroup
+    type: GitHubOrganization
+  - url: https://github.com/paysafecard
+    type: GitHubOrganization
+  - url: https://github.com/paysafecard/api-documentation
+    type: GitHubRepository
+  - url: plans/paysafe-plans-pricing.yml
+    type: Plans
+  - url: rate-limits/paysafe-rate-limits.yml
+    type: RateLimits
+  - url: finops/paysafe-finops.yml
+    type: FinOps
+  - type: Features
+    data:
+      - Single REST API integration for 100+ payment methods globally
+      - Supports cards, ACH, SEPA, BACS, EFT, iDEAL, BLIK, and more bank transfers
+      - PaysafeCash and PaysafeCard prepaid/cash-based payment methods
+      - Digital wallets including Apple Pay, Google Pay, PayPal, Skrill, Neteller, Venmo
+      - Crypto on-ramp for purchasing cryptocurrencies with fiat via Skrill
+      - 3D Secure v2 (PSD2 SCA compliant) authentication
+      - Recurring payment scheduling and subscription management
+      - White-label merchant onboarding via Applications API
+      - PayFac sub-merchant management and MATCH Pro screening
+      - Embedded digital wallet with prepaid card issuance (virtual and physical)
+      - Mobile wallet tokenization (Google Pay, Apple Pay, Samsung Pay)
+      - FX rates and multi-currency support
+      - Webhook notifications for transaction events
+      - Basic Access Authorization using Base64-encoded API key
+      - Test environment at api.test.paysafe.com
+      - Shopify and WooCommerce integrations available
+      - React Native, iOS, and Android mobile SDKs
+      - Server-side SDKs for Java and PHP
+    sources:
+      - https://developer.paysafe.com/en/
+      - https://developer.paysafe.com/en/api-docs/
+    updated: '2026-06-13'
+  - type: UseCases
+    data:
+      - name: Online Payment Acceptance
+        description: >-
+          Accept payments across credit cards, debit cards, bank transfers, vouchers, and digital wallets
+          through a single Payments API integration on web or mobile.
+      - name: Pay-by-Cash and Vouchers
+        description: >-
+          Enable customers without bank accounts or cards to pay with PaysafeCash at retail locations or
+          with PaysafeCard prepaid vouchers purchased at convenience stores.
+      - name: Recurring Billing and Subscriptions
+        description: >-
+          Create subscription plans and manage customer billing cycles with the Payment Scheduler API for
+          SaaS, media, and membership businesses.
+      - name: Platform Merchant Onboarding
+        description: >-
+          Build white-label merchant onboarding flows using the Applications API for PayFac and ISO
+          platforms managing hundreds or thousands of sub-merchants.
+      - name: Embedded Wallet as a Service
+        description: >-
+          Embed digital wallets with stored value, prepaid card issuance, and crypto on-ramp into consumer
+          apps and fintech platforms via the Embedded Wallets API.
+      - name: High-Risk Merchant Processing
+        description: >-
+          Process payments for high-risk and regulated industries (gaming, crypto, adult) with Paysafe's
+          specialized risk and compliance infrastructure.
+      - name: International and Multi-Currency Commerce
+        description: >-
+          Accept payments in 43+ countries using local payment methods and the FX Rates API for dynamic
+          currency conversion and transparent pricing.
+      - name: 3D Secure Authentication
+        description: >-
+          Add PSD2-compliant strong customer authentication to card transactions with the 3DS API, reducing
+          fraud liability for EU and UK merchants.

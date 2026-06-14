@@ -1,0 +1,79 @@
+specification: API Commons Rate Limits
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/RateLimits
+provider: Paysafe
+providerId: paysafe
+created: '2026-06-13'
+modified: '2026-06-13'
+reconciled: false
+tags:
+  - Payments
+  - Digital Wallets
+  - Prepaid Cards
+  - Rate Limiting
+description: >-
+  Paysafe does not publish specific per-second or per-minute API rate-limit numbers in its public developer
+  documentation. Throttling is enforced server-side; responses return HTTP 429 when limits are exceeded.
+  All Paysafe REST APIs share Basic Access Authorization over HTTPS and use the same base domain
+  (api.paysafe.com for production, api.test.paysafe.com for the test environment). Test environment
+  accounts have lower capacity than production and are intended for integration testing, not load testing.
+  For negotiated higher capacity, merchants should contact integrations@paysafe.com.
+sources:
+  - https://developer.paysafe.com/en/support/reference-information/rest-api-architecture/
+  - https://developer.paysafe.com/en/api-docs/
+notes: >-
+  Per-API rate-limit numbers are not publicly documented. Contact Paysafe support or your account manager
+  for production capacity limits and negotiated higher throughput.
+responseCodes:
+  throttled: 429
+  serviceUnavailable: 503
+limits:
+  - name: Production API request rate
+    scope: merchant-account
+    metric: varies
+    limit: not publicly documented
+    notes: Throttling enforced server-side; returns HTTP 429 on excess. Contact integrations@paysafe.com.
+  - name: Test environment request rate
+    scope: merchant-account
+    metric: varies
+    limit: lower than production
+    notes: Test (api.test.paysafe.com) is for integration testing only, not load or stress testing.
+  - name: Payment Scheduler API
+    scope: merchant-account
+    metric: varies
+    limit: not publicly documented
+    notes: REST API for subscriptions/plans shares general gateway capacity.
+  - name: Applications API
+    scope: platform-account
+    metric: varies
+    limit: not publicly documented
+    notes: Merchant onboarding API capacity available upon request through Paysafe account management.
+  - name: Embedded Wallets API
+    scope: platform-account
+    metric: varies
+    limit: not publicly documented
+    notes: Digital wallet and prepaid card API capacity tied to platform agreement terms.
+policies:
+  - name: Backoff Strategy
+    description: >-
+      Apply exponential backoff with jitter when receiving HTTP 429 or 5xx responses. Honor the
+      Retry-After header when present to determine safe retry timing.
+  - name: Idempotency
+    description: >-
+      Use deterministic and unique identifiers for payment requests to safely retry transient failures
+      without risk of duplicate charges or enrollments.
+  - name: Sandbox Discipline
+    description: >-
+      Reserve test environment credentials (api.test.paysafe.com) for integration and unit testing only.
+      Do not run sustained load tests or stress tests against the sandbox.
+  - name: Capacity Requests
+    description: >-
+      Production capacity increases must be coordinated through your Paysafe account manager or by
+      contacting integrations@paysafe.com. Capacity is tied to processing history and risk review.
+  - name: Separate Credentials per Environment
+    description: >-
+      Maintain separate API key sets for test and production environments. Never use production credentials
+      in a test or CI/CD context.
+maintainers:
+  - FN: Kin Lane
+    email: info@apievangelist.com

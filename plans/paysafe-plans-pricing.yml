@@ -1,0 +1,184 @@
+specification: API Commons Plans
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/Plans
+provider: Paysafe
+providerId: paysafe
+created: '2026-06-13'
+modified: '2026-06-13'
+reconciled: false
+tags:
+  - Payments
+  - Digital Wallets
+  - Prepaid Cards
+  - High-Risk Payments
+  - Fintech
+description: >-
+  Paysafe does not publish standard rate-card pricing publicly. Transaction fees are customized based on
+  monthly processing volume, average ticket size, industry/risk profile, and geographic scope. Pricing
+  structures include interchange-plus, tiered, and flat-rate models negotiated directly with Paysafe sales.
+  Independent review sources indicate indicative rates of approximately 2.75%–3.9% per transaction for
+  cards plus a fixed fee, with higher rates for high-risk verticals. Monthly fees, PCI compliance fees,
+  statement fees, and chargeback fees may also apply.
+sources:
+  - https://pricingnow.com/question/paysafe-pricing/
+  - https://thefinrate.com/paysafe-review-2026-high-risk-merchant-accounts-fees-approval-rates/
+  - https://www.comparisun.com/credit-card-processing/reviews/paysafe/
+  - https://developer.paysafe.com/en/
+plans:
+  - id: paysafe-interchange-plus
+    name: Interchange Plus (Custom)
+    type: usage-based
+    description: >-
+      Interchange-plus pricing passes the actual card network interchange rate through to the merchant,
+      plus a fixed Paysafe markup percentage and per-transaction fee. Rates are individually negotiated.
+    entries:
+      - label: Card transaction (interchange-plus)
+        name: tx_card_interchange_plus
+        type: metered
+        metric: transaction
+        limit: -1
+        timeFrame: usage
+        geo: global
+        unit: 1
+        price: interchange + ~0.50% + ~$0.10 (indicative; custom quote required)
+        userMultiplied: false
+      - label: Monthly account fee
+        name: monthly_fee
+        type: flat
+        metric: month
+        limit: -1
+        timeFrame: monthly
+        geo: global
+        unit: 1
+        price: ~$7.95 (indicative; varies by account)
+        userMultiplied: false
+    elements:
+      - name: Visa and Mastercard cards
+      - name: American Express
+      - name: Custom monthly account fee
+      - name: Dedicated account management
+  - id: paysafe-tiered-standard
+    name: Tiered Rate (Standard)
+    type: usage-based
+    description: >-
+      Tiered card processing rate applied at approximately 2.75%–3.9% per transaction depending on
+      card type, industry, and volume tier. Fixed per-transaction fee applies in addition.
+    entries:
+      - label: Standard card transaction
+        name: tx_card_standard
+        type: metered
+        metric: transaction
+        limit: -1
+        timeFrame: usage
+        geo: global
+        unit: 1
+        price: 2.75%–3.9% + fixed fee (indicative; custom quote required)
+        userMultiplied: false
+      - label: High-ticket volume rate
+        name: tx_high_ticket
+        type: metered
+        metric: transaction
+        limit: -1
+        timeFrame: usage
+        geo: global
+        unit: 1
+        price: ~3.9% + ~€1.50 per transaction (indicative)
+        userMultiplied: false
+    elements:
+      - name: Credit and Debit Cards
+      - name: High-Risk Industry Support
+  - id: paysafe-alternative-payments
+    name: Alternative and Local Payment Methods
+    type: usage-based
+    description: >-
+      Processing fees for bank transfers, direct debit (ACH, SEPA, BACS, EFT), cash vouchers
+      (PaysafeCash, PaysafeCard), and digital wallets (PayPal, Skrill, Neteller). Rates negotiated
+      per method and volume.
+    entries:
+      - label: Bank transfer / direct debit transaction
+        name: tx_bank_transfer
+        type: metered
+        metric: transaction
+        limit: -1
+        timeFrame: usage
+        geo: global
+        unit: 1
+        price: custom quote required
+        userMultiplied: false
+      - label: PaysafeCash / PaysafeCard transaction
+        name: tx_cash_voucher
+        type: metered
+        metric: transaction
+        limit: -1
+        timeFrame: usage
+        geo: global
+        unit: 1
+        price: custom quote required
+        userMultiplied: false
+      - label: Digital wallet transaction
+        name: tx_digital_wallet
+        type: metered
+        metric: transaction
+        limit: -1
+        timeFrame: usage
+        geo: global
+        unit: 1
+        price: custom quote required
+        userMultiplied: false
+    elements:
+      - name: iDEAL, BLIK, EPS, Interac e-Transfer
+      - name: ACH, SEPA, BACS, EFT direct debit
+      - name: PaysafeCash and PaysafeCard vouchers
+      - name: PayPal, Skrill, Neteller, Venmo
+  - id: paysafe-chargeback
+    name: Chargeback and Dispute Fees
+    type: usage-based
+    description: Per-incident fees for chargebacks and disputed transactions, applied on top of standard processing fees.
+    entries:
+      - label: Chargeback fee
+        name: chargeback_fee
+        type: metered
+        metric: dispute
+        limit: -1
+        timeFrame: usage
+        geo: global
+        unit: 1
+        price: varies (custom; typically $15–$25 per dispute)
+        userMultiplied: false
+      - label: Retrieval / inquiry fee
+        name: retrieval_fee
+        type: metered
+        metric: inquiry
+        limit: -1
+        timeFrame: usage
+        geo: global
+        unit: 1
+        price: varies by account
+        userMultiplied: false
+    elements:
+      - name: Dispute and Chargeback Handling
+  - id: paysafe-enterprise
+    name: Enterprise / High Volume (Custom)
+    type: enterprise
+    description: >-
+      Fully negotiated rates for established merchants and platforms with high monthly processing volumes.
+      Includes dedicated account management, custom SLAs, and tailored payment method configurations.
+    entries:
+      - label: Custom transaction pricing
+        name: tx_enterprise
+        type: metered
+        metric: transaction
+        limit: -1
+        timeFrame: usage
+        geo: configurable
+        unit: 1
+        price: custom (volume-discounted, interchange-plus or tiered)
+        userMultiplied: false
+    elements:
+      - name: Negotiated Rates
+      - name: Dedicated Account Management
+      - name: Custom Payment Method Mix
+      - name: Priority Support and SLAs
+maintainers:
+  - FN: Kin Lane
+    email: info@apievangelist.com

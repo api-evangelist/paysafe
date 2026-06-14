@@ -1,0 +1,165 @@
+specification: FinOps Framework
+specificationVersion: '1.0'
+schema: https://www.finops.org/framework/
+alignedWith:
+  framework: FinOps Foundation Framework
+  frameworkUrl: https://www.finops.org/framework/
+  dataSpec: FOCUS
+  dataSpecVersion: '1.3'
+  dataSpecUrl: https://focus.finops.org/focus-specification/v1-3/
+provider: Paysafe
+providerId: paysafe
+publisherName: Paysafe Group Holdings Limited
+serviceCategory: Payments
+created: '2026-06-13'
+modified: '2026-06-13'
+reconciled: false
+tags:
+  - Payments
+  - Digital Wallets
+  - Prepaid Cards
+  - High-Risk Payments
+  - FinOps
+  - FOCUS
+description: >-
+  FOCUS-aligned FinOps profile for Paysafe: customized per-transaction pricing across card payments,
+  alternative payment methods (ACH, SEPA, BACS, EFT, iDEAL, BLIK), cash vouchers (PaysafeCash,
+  PaysafeCard), digital wallets (Skrill, Neteller, PayPal, Apple Pay, Google Pay), and embedded wallet
+  services. Pricing is negotiated per merchant based on volume, industry risk, and payment method mix.
+  Per-incident chargeback fees and optional add-on services (3DS, FX rates, account updater,
+  network tokenization) contribute to total cost of payments.
+sources:
+  - https://developer.paysafe.com/en/
+  - https://pricingnow.com/question/paysafe-pricing/
+  - https://thefinrate.com/paysafe-review-2026-high-risk-merchant-accounts-fees-approval-rates/
+billingModel:
+  pricingCategory: Take Rate / Custom
+  billingFrequency: Continuous Settlement
+  billingCurrency: USD / EUR (varies by region and merchant agreement)
+  chargeCategories:
+    - Usage
+    - Adjustment
+    - Refund
+    - Tax
+    - Dispute
+focusColumns:
+  ServiceName: Paysafe Payments
+  ServiceCategory: Payments
+  ProviderName: Paysafe
+  PublisherName: Paysafe Group Holdings Limited
+  InvoiceIssuerName: Paysafe Group Holdings Limited
+  BillingCurrency: USD
+  PricingCategory: Custom
+  PricingUnit: transaction
+meters:
+  - name: card_transactions
+    description: >-
+      Credit and debit card transactions priced at a negotiated percentage (indicatively 2.75%–3.9%)
+      plus a fixed per-transaction fee. Rate varies by card type, geography, and merchant risk profile.
+    unit: transaction
+    aggregation: sum
+    dimensions:
+      - card_brand
+      - card_type
+      - country
+      - currency
+      - merchant_account
+  - name: alternative_payment_transactions
+    description: >-
+      Bank transfer and direct debit transactions (ACH, SEPA, BACS, EFT, iDEAL, BLIK, Interac)
+      at negotiated rates per payment method and corridor.
+    unit: transaction
+    aggregation: sum
+    dimensions:
+      - payment_method
+      - country
+      - currency
+      - merchant_account
+  - name: cash_voucher_transactions
+    description: >-
+      PaysafeCash and PaysafeCard prepaid voucher payment transactions at negotiated rates.
+      Available in 43+ countries; fee structure varies by region.
+    unit: transaction
+    aggregation: sum
+    dimensions:
+      - product
+      - country
+      - currency
+      - merchant_account
+  - name: digital_wallet_transactions
+    description: >-
+      Transactions processed via digital wallets including PayPal, Skrill, Neteller, Venmo,
+      Apple Pay, Google Pay, and MB WAY at negotiated per-method rates.
+    unit: transaction
+    aggregation: sum
+    dimensions:
+      - wallet_type
+      - country
+      - currency
+      - merchant_account
+  - name: chargebacks
+    description: Per-incident chargeback fees, typically $15–$25 per disputed transaction (varies by agreement).
+    unit: dispute
+    aggregation: sum
+    dimensions:
+      - merchant_account
+      - card_brand
+      - reason_code
+  - name: refunds
+    description: Refund transactions; processing fees on the original transaction are typically not returned.
+    unit: transaction
+    aggregation: sum
+    dimensions:
+      - merchant_account
+      - payment_method
+  - name: monthly_account_fee
+    description: >-
+      Fixed monthly account or platform fee where applicable under merchant agreement.
+      Not universally charged; dependent on negotiated contract.
+    unit: month
+    aggregation: sum
+    dimensions:
+      - merchant_account
+  - name: pci_compliance_fee
+    description: >-
+      Monthly or annual PCI DSS compliance fee for maintaining PCI-certified integration status.
+      Fee varies and may be waived under certain contract types.
+    unit: month
+    aggregation: sum
+    dimensions:
+      - merchant_account
+  - name: embedded_wallet_operations
+    description: >-
+      API calls and card operations within the Embedded Wallets product, including prepaid card
+      issuance, mobile wallet tokenization, and crypto on-ramp transactions.
+    unit: operation
+    aggregation: sum
+    dimensions:
+      - operation_type
+      - card_type
+      - merchant_account
+principles:
+  - name: Visibility
+    description: >-
+      Pull transaction-level data from the Paysafe Business Portal (merchant.paysafe.com/portal) and
+      via the Payments API transaction search to reconcile gross volume, fees, refunds, and disputes.
+      Track effective take rate per payment method and geography daily.
+  - name: Allocation
+    description: >-
+      Use distinct Paysafe merchant account numbers per business unit, brand, or market to attribute
+      payment costs directly to cost centers. Tag transactions with order metadata where supported
+      to enable granular FinOps chargeback reporting.
+  - name: Optimization
+    description: >-
+      Negotiate volume-based rate reductions as processing history matures. Route volume toward
+      lower-cost payment methods (e.g., direct debit over cards) where conversion allows. Minimize
+      cross-border surcharges by presenting in local currencies using the FX Rates API. Reduce
+      chargebacks through 3DS authentication and proactive dispute management.
+  - name: Accountability
+    description: >-
+      Designate a payments owner responsible for monthly review of effective take rate, chargeback ratio,
+      refund rate, and total cost of payments. Alert on variance greater than 10% against modeled
+      cost-of-payments baseline. Renegotiate contract terms annually as volume data becomes available.
+maintainers:
+  - FN: Kin Lane
+    email: info@apievangelist.com
