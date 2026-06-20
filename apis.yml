@@ -8,7 +8,7 @@ tags:
   - Financial Services
   - Fintech
   - High-Risk Payments
-image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 created: '2026-06-13'
 modified: '2026-06-13'
 description: >-
@@ -33,7 +33,7 @@ apis:
       - Direct Debit
       - Wallets
       - Alternative Payments
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     baseURL: https://api.paysafe.com
     humanURL: https://developer.paysafe.com/en/api-docs/payments-api/overview/
     description: >-
@@ -57,7 +57,7 @@ apis:
       - Authentication
       - Fraud Prevention
       - Cards
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     baseURL: https://api.paysafe.com
     humanURL: https://developer.paysafe.com/en/api-docs/3ds/using-the-api/api-endpoints/
     description: >-
@@ -78,7 +78,7 @@ apis:
       - Recurring Payments
       - Plans
       - Billing
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     baseURL: https://api.paysafe.com
     humanURL: https://developer.paysafe.com/en/api-docs/payment-scheduler/overview/
     description: >-
@@ -99,7 +99,7 @@ apis:
       - Applications
       - Platforms
       - PayFac
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     baseURL: https://api.paysafe.com
     humanURL: https://developer.paysafe.com/en/api-docs/applications-api/overview/
     description: >-
@@ -120,7 +120,7 @@ apis:
       - Embedded Finance
       - Prepaid
       - Crypto
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     baseURL: https://api.paysafe.com
     humanURL: https://docs.paysafe.com/docs/embedded-wallets
     description: >-
@@ -142,7 +142,7 @@ apis:
       - Vouchers
       - Pay-by-Cash
       - PaysafeCard
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     baseURL: https://api.paysafecard.com
     humanURL: https://www.paysafecard.com/fileadmin/api/
     description: >-
@@ -163,7 +163,7 @@ apis:
       - Sub-merchants
       - Onboarding
       - Platforms
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     baseURL: https://api.paysafe.com
     humanURL: https://developer.paysafe.com/en/api-docs/
     description: >-
@@ -182,7 +182,7 @@ apis:
       - Sub-merchants
       - MATCH
       - Visa
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     baseURL: https://api.paysafe.com
     humanURL: https://developer.paysafe.com/en/api-docs/
     description: >-
@@ -200,7 +200,7 @@ apis:
       - Currency
       - Exchange Rates
       - International
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     baseURL: https://api.paysafe.com
     humanURL: https://developer.paysafe.com/en/fx-rates-api/
     description: >-
