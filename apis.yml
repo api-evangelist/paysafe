@@ -30,7 +30,7 @@ description: >-
   alternative payment methods, PaysafeCash, PaysafeCard vouchers, and embedded digital wallet solutions.
   Paysafe specializes in high-risk and regulated industries and offers white-label merchant onboarding,
   3D Secure authentication, recurring payment scheduling, and FX rates for global commerce.
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 maintainers:
   - FN: API Evangelist
     url: http://apievangelist.com
