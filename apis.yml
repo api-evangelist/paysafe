@@ -206,7 +206,7 @@ apis:
     name: Paysafe PayFac Sub-merchant API
     tags:
       - PayFac
-      - Sub-Merchants
+      - Sub-merchants
       - Onboarding
       - Platforms
     tags_raw:
@@ -230,8 +230,8 @@ apis:
     tags:
       - Risk
       - Compliance
-      - Sub-Merchants
-      - Match
+      - Sub-merchants
+      - MATCH
       - Visa
     tags_raw:
       - Risk
