@@ -133,7 +133,7 @@ apis:
     tags:
       - Merchant Onboarding
       - Application
-      - Platforms
+      - Platform
       - PayFac
     tags_raw:
       - Merchant Onboarding
@@ -208,7 +208,7 @@ apis:
       - PayFac
       - Sub-Merchants
       - Onboarding
-      - Platforms
+      - Platform
     tags_raw:
       - PayFac
       - Sub-merchants
