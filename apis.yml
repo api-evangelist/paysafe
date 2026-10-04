@@ -5,7 +5,7 @@ tags:
   - Payments
   - Digital Wallet
   - Prepaid Cards
-  - Financial-Services
+  - Financial Services
   - Fintech
   - High-Risk Payments
 tags_raw:
@@ -15,17 +15,21 @@ tags_raw:
   - Financial Services
   - Fintech
   - High-Risk Payments
+  - Financial-Services
 deliveryModel:
-  model: unknown
+  model: saas
+  license_evidence:
+    not_product:
+    - paysafecard/api-documentation
   open_source: unknown
   commercial: true
   callable_host: false
-  label: Delivery model not determined — needs a product licence on record
+  label: Hosted service · you call their endpoint
   confidence: low
   source:
   - pricing
-  - repository-unlicensed
-  generated: '2026-08-28'
+  - repository-not-product
+  generated: '2026-09-25'
   method: derived
 accessModel:
   pricing: paid
@@ -228,7 +232,7 @@ apis:
   - aid: paysafe:paysafe-merchant-termination-inquiry-api
     name: Paysafe Merchant Termination Inquiry API
     tags:
-      - Risk
+      - Risk Management
       - Compliance
       - Sub-Merchants
       - Match
