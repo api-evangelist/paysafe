@@ -187,3 +187,54 @@ plans:
 maintainers:
   - FN: Kin Lane
     email: info@apievangelist.com
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - metered
+  units:
+  - period
+  - transaction
+  plans:
+  - name: Interchange Plus (Custom)
+    access: other
+    model: metered
+    model_how: stated
+    units:
+    - period
+    - transaction
+    periods:
+    - month
+    - per-use
+  - name: Tiered Rate (Standard)
+    access: other
+    model: metered
+    model_how: stated
+    units:
+    - transaction
+    periods:
+    - per-use
+  - name: Alternative and Local Payment Methods
+    access: other
+    model: metered
+    model_how: stated
+    units:
+    - transaction
+    periods:
+    - per-use
+  - name: Chargeback and Dispute Fees
+    access: other
+    model: metered
+    model_how: stated
+    units:
+    - other
+    periods:
+    - per-use
+  - name: Enterprise / High Volume (Custom)
+    access: enterprise
+    model: metered
+    model_how: derived
+    units:
+    - transaction
+    periods:
+    - per-use
